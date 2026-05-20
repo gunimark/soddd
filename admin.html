@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page page-single">
+      <section id="admin-login-panel" class="form-panel" aria-labelledby="admin-login-title">
+        <div class="heading">
+          <p class="eyebrow">Admin Login</p>
+          <h1 id="admin-login-title">เข้าสู่ระบบผู้ดูแล</h1>
+        </div>
+
+        <form id="admin-login-form" novalidate>
+          <label class="field">
+            <span>ชื่อผู้ใช้</span>
+            <input id="admin-user" name="adminUser" type="text" autocomplete="username" required />
+          </label>
+          <label class="field">
+            <span>รหัสผ่าน</span>
+            <input
+              id="admin-password"
+              name="adminPassword"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+          </label>
+          <p id="admin-login-error" class="error" role="alert" aria-live="polite"></p>
+          <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+      </section>
+
+      <section id="admin-panel" class="dashboard-panel admin-board" aria-labelledby="admin-title" hidden>
+        <div class="admin-header">
+          <div class="heading">
+            <p class="eyebrow">Admin Dashboard</p>
+            <h1 id="admin-title">จัดการข้อมูล</h1>
+          </div>
+          <div class="dashboard-actions">
+            <a class="secondary-link" href="dashboard.html">กลับหน้า Dashboard</a>
+            <button id="admin-logout-button" class="secondary-button" type="button">ออกจากระบบ</button>
+          </div>
+        </div>
+        <div id="admin-list" class="admin-list"></div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
