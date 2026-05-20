@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>กรอกแบบฟอร์ม</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page page-single">
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="heading">
+          <p class="eyebrow">ลงทะเบียนข้อมูล</p>
+          <h1 id="form-title">กรอกข้อมูลติดต่อ</h1>
+        </div>
+
+        <form id="contact-form" novalidate>
+          <label class="field">
+            <span>ชื่อ</span>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="กรอกชื่อของคุณ"
+              autocomplete="name"
+              required
+            />
+          </label>
+
+          <fieldset class="field">
+            <legend>เพศ</legend>
+            <div class="gender-grid">
+              <label>
+                <input type="radio" name="gender" value="ชาย👦🏻" required />
+                <span>ชาย👦🏻</span>
+              </label>
+              <label>
+                <input type="radio" name="gender" value="หญิง👩🏻" />
+                <span>หญิง👩🏻</span>
+              </label>
+              <label>
+                <input type="radio" name="gender" value="เพศทางเลือก🏳️‍🌈" />
+                <span>เพศทางเลือก🏳️‍🌈</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>สถานะ</legend>
+            <div class="choice-grid">
+              <label>
+                <input type="radio" name="relationshipStatus" value="โสด" required />
+                <span>โสด</span>
+              </label>
+              <label>
+                <input type="radio" name="relationshipStatus" value="มีแฟน" />
+                <span>มีแฟน</span>
+              </label>
+              <label>
+                <input type="radio" name="relationshipStatus" value="มีคนคุย" />
+                <span>มีคนคุย</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>ช่องทาง</legend>
+            <div class="choice-grid">
+              <label>
+                <input type="radio" name="contactPlatform" value="IG" required />
+                <span>IG</span>
+              </label>
+              <label>
+                <input type="radio" name="contactPlatform" value="TikTok" />
+                <span>TikTok</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span>ลิ้งช่องทางติดต่อ</span>
+            <input
+              id="contact-link"
+              name="contactLink"
+              type="url"
+              placeholder="https://example.com/profile"
+              inputmode="url"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>รูปภาพ</span>
+            <input id="photo" name="photo" type="file" accept="image/*" required />
+          </label>
+
+          <div id="photo-preview" class="photo-preview" aria-live="polite">
+            <span>รูปที่เลือกจะแสดงตรงนี้</span>
+          </div>
+
+          <p id="form-error" class="error" role="alert" aria-live="polite"></p>
+
+          <button type="submit">ส่งข้อมูล</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
